@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Background.css';
 import video1 from '../../assets/video1.mp4';
 import image1 from '../../assets/image1.png';
@@ -23,5 +24,10 @@ function Background({playStatus, heroCount}){
         return <img src={image3} className='background fade-in' alt="Vehicle" />
     }
 }
+
+Background.propTypes = {
+    playStatus: PropTypes.bool.isRequired,
+    heroCount: PropTypes.number.isRequired,
+};  
 
 export default Background;

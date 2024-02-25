@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Hero.css';
 import arrow_btn from '../../assets/arrow_btn.png';
 import play_icon from '../../assets/play_icon.png';
@@ -27,6 +28,14 @@ function Hero({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}){
             </div>
         </div>
     );
+}
+
+Hero.propTypes = {
+    heroData: PropTypes.object.isRequired,
+    setHeroCount: PropTypes.func.isRequired,
+    heroCount: PropTypes.number.isRequired,
+    setPlayStatus: PropTypes.func.isRequired,
+    playStatus: PropTypes.bool.isRequired,
 }
 
 export default Hero;
